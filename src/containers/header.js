@@ -1,15 +1,16 @@
 import React from 'react';
-import { Header } from '../components/accordion/styles/accordion';
+import { Header } from '../components';
+import * as ROUTES from '../contstants/routes';
+import logo from '../logo.svg';
 
-function HeaderContainer() {
+export function HeaderContainer({ children }) {
   return (
     <Header>
       <Header.Frame>
-        <Header.Logo />
-        <Header.Button />
+        <Header.Logo to={ROUTES.HOME} src={logo} alt="NETFLIX" />
+        <Header.ButtonLink to={ROUTES.SIGN_IN}> Sign in</Header.ButtonLink>
       </Header.Frame>
+      {children}
     </Header>
   );
 }
-
-export default HeaderContainer;
