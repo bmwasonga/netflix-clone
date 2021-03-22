@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+
+import { FooterContainer } from '../containers/footer';
+import { useContent } from '../hooks';
 
 function Browse() {
-  return <p>Hello from the Browse side.</p>;
+  const { series } = useContent('series');
+  console.log(series);
+
+  return (
+    <>
+      <FooterContainer />
+    </>
+  );
 }
 
 export default Browse;
