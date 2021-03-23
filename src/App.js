@@ -7,7 +7,7 @@ import { Home, Browse, Signin, Signup } from './pages';
 
 export default function App() {
   const { user } = useAuthListenter();
-
+  console.log(user);
   return (
     <Router>
       <IsUserRedirect

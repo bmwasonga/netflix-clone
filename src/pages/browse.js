@@ -1,12 +1,13 @@
-import React, { useState, useContext } from 'react';
-
+import React from 'react';
 import { FooterContainer } from '../containers/footer';
 import { useContent } from '../hooks';
+import selectionFilter from '../utils/selection-filter';
 
 function Browse() {
   const { series } = useContent('series');
-  console.log(series);
+  const { films } = useContent('films');
 
+  const slides = selectionFilter({ series, films });
   return (
     <>
       <FooterContainer />
