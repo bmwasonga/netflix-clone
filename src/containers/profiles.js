@@ -8,12 +8,12 @@ export function SelectProfileContainer({ user, setProfile }) {
     <>
       <Header bg={false}>
         <Header.Frame>
-          <Header.Logo to={ROUTES.HOME} alt="Netflix Logo" src={logo} />
+          <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
         </Header.Frame>
       </Header>
 
       <Profiles>
-        <Profiles.Title>Who's Watching?</Profiles.Title>
+        <Profiles.Title>Who's watching?</Profiles.Title>
         <Profiles.List>
           <Profiles.User
             onClick={() =>
@@ -22,6 +22,7 @@ export function SelectProfileContainer({ user, setProfile }) {
                 photoURL: user.photoURL,
               })
             }
+            data-testid="user-profile"
           >
             <Profiles.Picture src={user.photoURL} />
             <Profiles.Name>{user.displayName}</Profiles.Name>

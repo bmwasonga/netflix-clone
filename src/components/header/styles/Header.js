@@ -54,3 +54,44 @@ export const ButtonLink = styled(ReactRouterLink)`
     background-color: #f40612;
   }
 `;
+
+export const Feature = styled(Container)`
+  padding: 150px 0 150px 0;
+  flex-direction: column;
+  align-items: normal;
+  width: 50%;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
+`;
+
+export const Text = styled.h1`
+  color: white;
+  font-size: 50px;
+  line-height: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45)
+  margin: 0;
+`;
+
+export const TetxtSmall = styled.p`
+color: white;
+font-size: 22px;
+font-weight: bold;
+line-height: normal;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45)
+margin: 0;
+margin-bottom: 20px;
+`;
+
+export const Link = styled.p`
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 30px;
+  font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
+
+  &:hover {
+    font-weight: bold;
+  }
+`;
