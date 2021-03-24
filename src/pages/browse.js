@@ -1,4 +1,5 @@
 import React from 'react';
+import BrowseContainer from '../containers/browse';
 import { FooterContainer } from '../containers/footer';
 import { useContent } from '../hooks';
 import selectionFilter from '../utils/selection-filter';
@@ -8,9 +9,10 @@ function Browse() {
   const { films } = useContent('films');
 
   const slides = selectionFilter({ series, films });
+
   return (
     <>
-      <FooterContainer />
+      <BrowseContainer slides={slides} />
     </>
   );
 }
